@@ -32,7 +32,7 @@ jobs:
         run: npm ci
       
       - name: Build
-        run: npx vite build
+        run: npx vite build --base=/${{ github.event.repository.name }}/
       
       - name: Add .nojekyll file
         run: touch dist/public/.nojekyll
